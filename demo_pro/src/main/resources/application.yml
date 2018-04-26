@@ -1,0 +1,22 @@
+#YML多环境配置
+spring:
+  profiles:
+    active: dev
+logging:
+  config: classpath:logback-spring.xml
+
+
+---
+spring:
+  profiles: dev
+
+server:
+  port: 8080
+
+
+---
+spring:
+  profiles: pro
+
+server:
+  port: 8081
