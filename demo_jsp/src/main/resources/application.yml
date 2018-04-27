@@ -8,6 +8,17 @@ spring:
 logging:
   config: classpath:logback-spring.xml
 
+
+  #  http:
+  #    encoding:
+  #      charset: utf-8
+  #      force: true
+  #      enabled: true
+  #server:
+  #  tomcat:
+  #    uri-encoding: UTF-8
+
+
 ---
 spring:
   profiles: dev

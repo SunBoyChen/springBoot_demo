@@ -12,7 +12,7 @@
 <#-- 默认加载static下的资源 -->
 <center>
     <img src="/images/logo.png" />
-    <h1 id="title">${title}</h1>
+    <h1 id="title">${title} 测试demo_cores跨域请求</h1>
 </center>
 
 <script type="text/javascript" src="/js/jquery-2.2.3.min.js"></script>

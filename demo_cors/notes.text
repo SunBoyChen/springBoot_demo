@@ -1,0 +1,5 @@
+//运行相应环境
+java -jar myapp.jar --spring.profiles.active=dev
+//CORS解决跨域问题
+1. 粗粒度
+2. 细粒度

@@ -1,0 +1,6 @@
+方法一:在 SpringBootApplication 上使用@ServletComponentScan 注解后,直接通过@WebServlet、
+@WebFilter、@WebListener 注解自动注册
+
+
+方法二：方法一:通过注册 ServletRegistrationBean、 FilterRegistrationBean 和
+    ServletListenerRegistrationBean 获得控制

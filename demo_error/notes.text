@@ -1,0 +1,7 @@
+//运行相应环境
+java -jar myapp.jar --spring.profiles.active=dev
+//整合了freemark以及日志
+//跳转错误页面
+此项目介绍亮两种处理异常方法
+1. 通过@ControllerAdvice 注解定义异常
+2. 定义一个异常类继承 ErrorController
