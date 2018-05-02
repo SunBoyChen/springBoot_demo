@@ -1,5 +1,6 @@
 package com.zhihua.demo_amqp;
 
+import com.zhihua.demo_amqp.component.CallBackSender;
 import com.zhihua.demo_amqp.component.RoncooAmqpComponent;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -17,6 +18,30 @@ public class DemoAmqpApplicationTests {
 	@Test
 	public void send() {
 		roncooAmqpComponent.send("hello world2");
+	}
+
+	@Test
+	public void sendUser() {
+		roncooAmqpComponent.sendUser();
+	}
+
+	@Test
+	public void send2() {
+		roncooAmqpComponent.send();
+	}
+
+	@Test
+	public void sendFanout() {
+		roncooAmqpComponent.sendFanout();
+	}
+
+
+	@Autowired
+	private CallBackSender callBackSender;
+
+	@Test
+	public void callBack() {
+		callBackSender.send();
 	}
 
 }

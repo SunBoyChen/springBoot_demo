@@ -1,0 +1,7 @@
+spring:
+  mail:
+    host: smtp.163.com
+    port: 25
+    username: chen1092248901@163.com
+    password: chenzhihua123456
+    protocol: smtp

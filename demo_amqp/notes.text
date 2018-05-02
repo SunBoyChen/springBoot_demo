@@ -1,3 +1,7 @@
 //运行相应环境
 java -jar myapp.jar --spring.profiles.active=dev
 //整合了RabbitMQ
+可以参考
+https://www.cnblogs.com/boshen-hzb/p/6841982.html
+
+https://blog.csdn.net/phker/article/details/71211895
