@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+
+<mapper namespace="com.zhihua.demo_mybatis.mapper.UserMapper" >
+
+    <resultMap id="BaseResultMap" type="com.zhihua.demo_mybatis.entity.UserEntity" >
+        <id column="id" property="t_id" jdbcType="INTEGER" />
+        <result column="name" property="t_name" jdbcType="VARCHAR" />
+        <result column="age" property="t_age" jdbcType="INTEGER" />
+        <result column="address" property="t_address" jdbcType="VARCHAR" />
+        <result column="pwd" property="t_pwd" jdbcType="VARCHAR" />
+        <result column="bir" property="t_bir" jdbcType="DATE" />
+    </resultMap>
+
+    <sql id="Base_Column_List" >
+        t_id   as id,
+        t_name as name,
+        t_age  as age,
+        t_address as address,
+        t_pwd as pwd,
+        t_bir as bir
+    </sql>
+
+
+    <!--<select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Integer" >-->
+    <select id="selectByPrimaryKey" resultType="com.zhihua.demo_mybatis.entity.UserEntity" parameterType="java.lang.Integer" >
+        select
+        <include refid="Base_Column_List" />
+        from t_user
+        where t_id = #{id,jdbcType=INTEGER}
+    </select>
+
+    <insert id="insert" parameterType="com.zhihua.demo_mybatis.entity.UserEntity" >
+        insert into t_user (t_id,t_name,t_age,t_address,t_pwd,t_bir)
+        values (#{id}, #{name},#{age},#{address},#{pwd},#{bir})
+    </insert>
+
+</mapper>

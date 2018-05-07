@@ -19,7 +19,6 @@ public class RestRoncooController {
     @RequestMapping(value = "/update/{id}", method = RequestMethod.GET)
     public String update2(@PathVariable(value = "id") Integer id) {
         System.out.println(id);
-
         return id+"";
     }
 }

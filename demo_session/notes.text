@@ -1,0 +1,16 @@
+//运行相应环境
+java -jar myapp.jar --spring.profiles.active=dev
+使用Spring Session 实现 redis
+
+session集群的解决方案：
+1.扩展指定server
+利用Servlet容器提供的插件功能，自定义HttpSession的创建和管理策略，并通过配置的方式替换掉默认的策略。缺点：耦合Tomcat/Jetty等Servlet容器，不能随意更换容器。
+
+2.利用Filter
+利用HttpServletRequestWrapper，实现自己的 getSession()方法，接管创建和管理Session数据的工作。spring-session就是通过这样的思路实现的。
+
+Spring Boot中spring session支持方式：
+JDBC、MongoDB、Redis、Hazelcast、HashMap
+
+
+此处使用redis

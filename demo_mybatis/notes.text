@@ -1,0 +1,22 @@
+//运行相应环境
+java -jar myapp.jar --spring.profiles.active=dev
+//整合了mybatis，加入Druid
+//集成 Swagger
+自定义(注解的使用)
+@ApiIgnore
+忽略暴露的 api
+@ApiOperation(value = "查找", notes = "根据用户 ID 查找用户")
+添加说明
+其他注解:
+@Api:用在类上,说明该类的作用
+@ApiImplicitParams:用在方法上包含一组参数说明
+@ApiResponses:用于表示一组响应
+@ApiResponse:用在@ApiResponses 中,一般用于表达一个错误的响应信息
+code:数字,例如 400
+message:信息,例如"请求参数没填好"
+response:抛出异常的类
+@ApiModel:描述一个 Model 的信息(这种一般用在 post 创建的时候,使用@RequestBody 这样的场
+景,请求参数无法使用@ApiImplicitParam 注解进行描述的时候)
+@ApiModelProperty:描述一个 model 的属性
+更多请查看
+https://github.com/swagger-api/swagger-core/wiki/Annotations
